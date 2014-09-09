@@ -8,6 +8,5 @@
 ## $RepeatedMsgReduction on                                          ##
 ##                                                                   ##
 ######################################################################
-cd /etc
-sed -i.09092014 -e '/$ActionFileDefaultTemplate/a\\n# Filter duplicated messages\n$RepeatedMsgReduction on' rsyslog.conf
+sed -i.09092014 -e '/$ActionFileDefaultTemplate/a\\n# Filter duplicated messages\n$RepeatedMsgReduction on' /etc/rsyslog.conf
 service rsyslog restart
