@@ -1,0 +1,12 @@
+#! /bin/bash
+#######################################################################
+## This script is to update rsyslog.conf                             ##
+## Version 1                                                         ##
+## created by JasonWang on Sep 9, 2014                               ##
+## 1.Add following two lines under  #### GLOBAL DIRECTIVES ####      ##
+## # Filter duplicated messages                                      ##
+## $RepeatedMsgReduction on                                          ##
+##                                                                   ##
+######################################################################
+sed -i.09092014 -e '/$ActionFileDefaultTemplate/a\\n# Filter duplicated messages\n$RepeatedMsgReduction on' rsyslog.conf
+service rsyslog restart
